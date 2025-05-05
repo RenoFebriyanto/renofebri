@@ -46,15 +46,13 @@ export const Uses = () => {
                   <ListItem>
                     <Link href="https://www.figma.com">Figma</Link> is my primary tool for
                     UI design these days. Made the switch from Sketch in 2020 and haven’t
-                    looked back. I’ve also created{' '}
-                    <Link href="https://www.figma.com/@hamish">a few plugins</Link> that
-                    you can install.
+                    looked back.
                   </ListItem>
+
                   <ListItem>
-                    Any motion graphics I create are created in Adobe After Effects. So
-                    far I haven’t found a non-Adobe product that’s as good. If anyone has
-                    suggestions please <Link href="/contact">message me</Link>.
+                    I also use <Link href="https://code.visualstudio.com/">Visual Studio Code</Link> when working on UI components directly with code — perfect for tweaking layout, styles, or building design systems.
                   </ListItem>
+
                   <ListItem>
                     For any 3D models and video editing I use{' '}
                     <Link href="https://www.blender.org/">Blender</Link>. Since 2.8 it’s
@@ -67,53 +65,41 @@ export const Uses = () => {
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection padding="none" className={styles.section}>
-          <ProjectSectionContent>
-            <ProjectTextRow width="m">
-              <ProjectSectionHeading>Development</ProjectSectionHeading>
-              <ProjectSectionText as="div">
-                <List>
-                  <ListItem>
-                    I use <Link href="https://vscodium.com/">VSCodium</Link> as my text
-                    editor, with the Tokyo Night theme and Operator Mono as my typeface of
-                    choice.
-                  </ListItem>
-                  <ListItem>
-                    Firefox is my main browser for both development and general use.
-                  </ListItem>
-                  <ListItem>
-                    <Link href="https://reactjs.org/">React</Link> is my front end
-                    Javascript library of choice. The component-centric mental model is
-                    the first thing that truly made sense to me as a designer.
-                  </ListItem>
-                  <ListItem>
-                    For 3D effects and image shaders I use{' '}
-                    <Link href="https://threejs.org/">three.js</Link>. It has a bit of a
-                    learning curve but you can do some really powerful stuff with it.
-                  </ListItem>
-                  <ListItem>
-                    For CSS I’ve used a myriad pre-processors and css-in-js solutions like
-                    styled-components, but these days I’m using vanilla CSS with{' '}
-                    <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
-                    features today.
-                  </ListItem>
-                  <ListItem>
-                    For Javascript animations I use{' '}
-                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
-                    a great way to add spring animations to React and three.js.
-                  </ListItem>
-                  <ListItem>
-                    For building and testing UI components in isolation I use{' '}
-                    <Link href="https://storybook.js.org/">Storybook</Link>. Check out the{' '}
-                    <Link href="https://storybook.hamishw.com">
-                      storybook for this website
-                    </Link>
-                    .
-                  </ListItem>
-                </List>
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
+
+          
+  <ProjectSectionContent>
+    <ProjectTextRow width="m">
+      <ProjectSectionHeading>Game Development</ProjectSectionHeading>
+      <ProjectSectionText as="div">
+        <List>
+          <ListItem>
+            I primarily use <Link href="https://unity.com/">Unity</Link> for game development. It’s an incredibly versatile engine that supports both 2D and 3D games, and I’ve been using it extensively for various projects.
+          </ListItem>
+          <ListItem>
+            For creating 3D assets, I rely on <Link href="https://www.blender.org/">Blender</Link>. It’s a powerful open-source tool that allows me to design models and animations for my games without relying on expensive software.
+          </ListItem>
+          <ListItem>
+            For coding and scripting, I use <Link href="https://code.visualstudio.com/">Visual Studio Code</Link>. Its support for various languages and extensive plugin ecosystem makes it the ideal choice for game development.
+          </ListItem>
+          <ListItem>
+            For game scripting and coding, I use <Link href="https://docs.microsoft.com/en-us/dotnet/csharp/">C#</Link>, the primary programming language for Unity.
+          </ListItem>
+          <ListItem>
+            For asset management and version control, I use <Link href="https://git-scm.com/">Git</Link> alongside <Link href="https://github.com/">GitHub</Link> to manage and collaborate on game projects.
+          </ListItem>
+          <ListItem>
+          For testing and fixing bugs, I mostly just use the built-in console and <Link href="https://docs.unity3d.com/Manual/Profiler.html">Unity Profiler</Link>. It's simple but gets the job done when I need to track performance or figure out what's going wrong.
+          </ListItem>
+
+        </List>
+      </ProjectSectionText>
+    </ProjectTextRow>
+  </ProjectSectionContent>
+</ProjectSection>
+
+
+        {/* Jangan dulu di ubah Chatgpt untuk bagian yang bawah ini */}
+
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
@@ -121,40 +107,28 @@ export const Uses = () => {
               <Table>
                 <TableBody>
                   <TableRow>
-                    <TableHeadCell>Desktop</TableHeadCell>
-                    <TableCell>Custom built</TableCell>
-                  </TableRow>
-                  <TableRow>
                     <TableHeadCell>Operating system</TableHeadCell>
-                    <TableCell>Arch Linux (by the way)</TableCell>
+                    <TableCell>Windows 10</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Browser</TableHeadCell>
-                    <TableCell>Zen Browser</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableHeadCell>Monitor</TableHeadCell>
-                    <TableCell>1440p IPS 144hz LG 27GL850</TableCell>
+                    <TableCell>Chrome</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Keyboard</TableHeadCell>
-                    <TableCell>Tofu65</TableCell>
+                    <TableCell>NYK Nemesis HELENS MKN-06</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Mouse</TableHeadCell>
-                    <TableCell>Logitech G403</TableCell>
+                    <TableCell>Dell Optical Mouse - MS116</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Laptop</TableHeadCell>
-                    <TableCell>Macbook Pro 14″</TableCell>
+                    <TableCell>ASUS Vivobook 16</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Headphones</TableHeadCell>
-                    <TableCell>Audio Technica ATH-M50x/Apple Airpods</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableHeadCell>Microphone</TableHeadCell>
-                    <TableCell>Blue Yeti</TableCell>
+                    <TableCell>dbE GM210 7.1</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

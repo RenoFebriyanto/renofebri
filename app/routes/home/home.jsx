@@ -1,15 +1,15 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import gamestackTexture2Large from '~/assets/gamestack-play-large.jpg';
+import gamestackTexture2Placeholder from '~/assets/gamestack-play-placeholder.jpg';
+import gamestackTexture2 from '~/assets/gamestack-play.jpg';
+import gamestackTextureLarge from '~/assets/gamestack-view-large.jpg';
+import gamestackTexturePlaceholder from '~/assets/gamestack-view-placeholder.jpg';
+import gamestackTexture from '~/assets/gamestack-view.jpg';
+import sliceTextureLarge from '~/assets/spr-ar-dark-large.png';
+import sliceTexturePlaceholder from '~/assets/spr-ar-dark-placeholder.png';
+import sliceTexture from '~/assets/spr-ar-dark.png';
+import sprTextureLarge from '~/assets/spr-lesson-large.jpg';
+import sprTexturePlaceholder from '~/assets/spr-lesson-placeholder.jpg';
+import sprTexture from '~/assets/spr-lesson-dark.jpg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -41,8 +41,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    title: 'Game Developer + Designer',
+    description: `Game development portfolio of ${config.name} — a game developer crafting engaging interactive experiences for PC, mobile, and web platforms, with a focus on gameplay design, immersive storytelling, and performance optimization.`,
   });
 };
 
@@ -103,8 +103,8 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="Mistake Of Midnight"
+        description="Honing my skills in developing a game, by creating a horror game with a mystery theme, forcing players to uncover the mystery of an old house in the middle of the forest"
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -124,10 +124,10 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Flappy Bird"
+        description="I developed this project as a hands-on exercise to learn the full 2D game development workflow in Unity, with a focus on core logic, clean structure, and efficient code."
+        buttonText="View project"
+        buttonLink="/projects/smart-sparrow"
         model={{
           type: 'phone',
           alt: 'App login screen',
@@ -148,10 +148,12 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        title="Augmented Reality"
+        description="I participated in the Picto Grafest exhibition with the team, 
+        showcasing an Augmented Reality (AR) project that allows users to view and 
+        interact with 3D elements"
         buttonText="View project"
-        buttonLink="/projects/slice"
+        buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
           alt: 'Annotating a biomedical image in the Slice app',
