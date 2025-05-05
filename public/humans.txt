@@ -1,7 +1,9 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+ ___   ____
+|   | |    \
+|   | |     |
+|   | |    /
+|   | |    \
+|___| |_____\
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
@@ -10,7 +12,7 @@ _______________________________________________________________________________
 
 DESIGNER | デザイナー
 
-Hamish Williams
+Reno Febriyanto
 Hand crafted design & web development
 
 Design tools:
@@ -18,8 +20,8 @@ Figma
 Photoshop
 Blender
 
-twitter.com/hamishmw
-github.com/hamishmw
+x.com/CatMounth
+github.com/VoidExo
 
 _______________________________________________________________________________
 
