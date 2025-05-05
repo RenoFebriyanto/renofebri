@@ -15,7 +15,7 @@ import { cssProps, msToNum, numToMs } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import { Form, useActionData, useNavigation } from '@remix-run/react';
 import { json } from '@remix-run/cloudflare';
-import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+// AWS SES import removed
 import styles from './contact.module.css';
 
 export const meta = () => {
@@ -31,14 +31,6 @@ const MAX_MESSAGE_LENGTH = 4096;
 const EMAIL_PATTERN = /(.+)@(.+){2,}\.(.+){2,}/;
 
 export async function action({ context, request }) {
-  const ses = new SESClient({
-    region: 'us-east-1',
-    credentials: {
-      accessKeyId: context.cloudflare.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: context.cloudflare.env.AWS_SECRET_ACCESS_KEY,
-    },
-  });
-
   const formData = await request.formData();
   const isBot = String(formData.get('name'));
   const email = String(formData.get('email'));
@@ -69,28 +61,39 @@ export async function action({ context, request }) {
     return json({ errors });
   }
 
-  // Send email via Amazon SES
-  await ses.send(
-    new SendEmailCommand({
-      Destination: {
-        ToAddresses: [context.cloudflare.env.EMAIL],
-      },
-      Message: {
-        Body: {
-          Text: {
-            Data: `From: ${email}\n\n${message}`,
-          },
-        },
-        Subject: {
-          Data: `Portfolio message from ${email}`,
-        },
-      },
-      Source: `Portfolio <${context.cloudflare.env.FROM_EMAIL}>`,
-      ReplyToAddresses: [email],
-    })
-  );
+  // Send email via Formspree
+  try {
+    // Replace YOUR_FORMSPREE_FORM_ID with your actual Formspree form ID
+    const formspreeEndpoint = 'https://formspree.io/f/mwpoovwj';
 
-  return json({ success: true });
+    const response = await fetch(formspreeEndpoint, {
+      method: 'POST',
+      body: JSON.stringify({ email, message }),
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to send message through Formspree');
+    }
+
+    const responseData = await response.json();
+
+    if (responseData.error) {
+      return json({
+        errors: { message: 'Failed to send message. Please try again later.' },
+      });
+    }
+
+    return json({ success: true });
+  } catch (error) {
+    console.error('Formspree submission error:', error);
+    return json({
+      errors: { message: 'An error occurred while sending your message. Please try again later.' },
+    });
+  }
 }
 
 export const Contact = () => {
