@@ -1,9 +1,9 @@
- ___   ____
-|   | |    \
-|   | |     |
-|   | |    /
-|   | |    \
-|___| |_____\
+ ___  ___
+|   ||   \
+|   ||    |
+|   ||   /
+|   ||   \
+|___||____\
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
@@ -21,7 +21,7 @@ Photoshop
 Blender
 
 x.com/CatMounth
-github.com/VoidExo
+github.com/RenoFebriyanto
 
 _______________________________________________________________________________
 
